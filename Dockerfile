@@ -25,6 +25,7 @@ RUN \
   rm sbt-$SBT_VERSION.deb && \
   apt-get update && \
   apt-get install sbt && \
+  apt-get install redis-server && \
   sbt sbtVersion && \
   mkdir project && \
   echo "scalaVersion := \"${SCALA_VERSION}\"" > build.sbt && \
